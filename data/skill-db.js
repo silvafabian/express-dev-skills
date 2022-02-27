@@ -1,14 +1,14 @@
 const skills = [
-  {text: 'JavaScript', done: true, _id: 001},
-  {text: 'HTTML', done: true, _id: 002},
-  {text: 'CSS', done: true, _id: 003},
-  {text: 'Java', done: false, _id: 004},
-  {text: 'Express', done: false, _id: 005},
-  {text: 'Node.js', done: false, _id: 006},
-  {text: 'Mongoose', done: false, _id: 007},
-  {text: 'Git', done: true, _id: 0010},
-  {text: 'GitHub', done: true, _id: 011},
-  {text: 'MongoDB', done: false, _id: 012},
+  {text: 'JavaScript', done: true, _id: 1},
+  {text: 'HTTML', done: true, _id: 2},
+  {text: 'CSS', done: true, _id: 3},
+  {text: 'Java', done: false, _id: 4},
+  {text: 'Express', done: false, _id: 5},
+  {text: 'Node.js', done: false, _id: 6},
+  {text: 'Mongoose', done: false, _id: 7},
+  {text: 'Git', done: true, _id: 10},
+  {text: 'GitHub', done: true, _id: 11},
+  {text: 'MongoDB', done: false, _id: 12},
 ]
 
 const find = (conditions, callback) => {
@@ -27,6 +27,18 @@ const find = (conditions, callback) => {
   }
 }
 
+const findById = (id, callback) =>{
+  try {
+    const skill = skills.find(skill => skill._id === parseInt(id))
+    if (!skill) throw new Error ('No skill was found')
+    return callback(null, skill)
+  } catch (error) {
+    console.log(error)
+    return callback(error, null)
+  }
+}
+
 export { 
-	find
+	find,
+  findById
 }
