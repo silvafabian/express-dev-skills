@@ -1,13 +1,14 @@
 const skills = [
-  {text: 'JavaScript', done: 'yes', _id: 125223},
-  {text: 'HTTML', done: 'yes', _id: 127904},
-  {text: 'CSS', done: 'yes', _id: 139608},
-  {text: 'Java', done: 'in progress', _id: 139600},
-  {text: 'Express', done: 'in progress', _id: 139601},
-  {text: 'Node.js', done: 'in progress', _id: 139602},
-  {text: 'Mongoose', done: 'in progress', _id: 139603},
-  {text: 'Git', done: 'yes', _id: 139604},
-  {text: 'GitHub', done: 'yes', _id: 139605},
+  {text: 'JavaScript', done: true, _id: 001},
+  {text: 'HTTML', done: true, _id: 002},
+  {text: 'CSS', done: true, _id: 003},
+  {text: 'Java', done: false, _id: 004},
+  {text: 'Express', done: false, _id: 005},
+  {text: 'Node.js', done: false, _id: 006},
+  {text: 'Mongoose', done: false, _id: 007},
+  {text: 'Git', done: true, _id: 0010},
+  {text: 'GitHub', done: true, _id: 011},
+  {text: 'MongoDB', done: false, _id: 012},
 ]
 
 const find = (conditions, callback) => {
