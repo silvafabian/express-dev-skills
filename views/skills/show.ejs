@@ -8,18 +8,14 @@
   <title>Skills</title>
 </head>
 <body>
-  <h1>Skills List</h1>
+  <h1>Skills</h1>
   <% if(error) { %>
     <h2><%= error %></h2>
+  <% } else { %>
+    <h2>Skill #<%= skill._id %></h2>
+    <h3><%= skill.text %></h3>
+    <p>Complete: <%= skill.done ? 'Yes' : 'In Progress' %></p>
   <% } %>
-  <ul>
-    <% skills.forEach(function(skill) { %>
-      <li>
-        <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
-          - 
-        <%= skill.done ? 'Yes' : 'In Progress' %>
-      </li>
-    <% }) %>
-  </ul>
+	<a href="/skills">Go back</a>
 </body>
 </html>
